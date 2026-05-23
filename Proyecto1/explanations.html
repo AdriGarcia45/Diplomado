@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicaciones Estandarizadas de Componentes HTML5</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .component-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .component-table th, .component-table td {
+            border: 1px solid var(--border-color);
+            padding: 0.5rem;
+            text-align: left;
+        }
+        .component-table th {
+            background: var(--light-bg);
+            font-weight: bold;
+        }
+        .spec-ref {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+        .accessibility-note {
+            background: #e8f5e8;
+            border-left: 4px solid var(--accent-color);
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explicaciones Estandarizadas de Componentes HTML5</h1>
+        <p>Guía profesional y conforme a estándares para el uso de elementos HTML5 con énfasis en accesibilidad y mejores prácticas.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#semantic">Elementos Semánticos</a></li>
+            <li><a href="#text">Elementos de Texto</a></li>
+            <li><a href="#lists">Listas</a></li>
+            <li><a href="#media">Multimedia</a></li>
+            <li><a href="#forms">Formularios</a></li>
+            <li><a href="#interactive">Elementos Interactivos</a></li>
+            <li><a href="#graphics">Gráficos</a></li>
+            <li><a href="#advanced">Elementos Avanzados</a></li>
+            <li><a href="index.html">Volver a la Demo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="semantic">
+            <h2>Elementos Semánticos</h2>
+            <p>Los elementos semánticos proporcionan significado estructural al contenido, mejorando la accesibilidad y el SEO.</p>
+
+            <h3>&lt;article&gt;</h3>
+            <p>Representa contenido independiente y autocontenido que podría distribuirse por sí solo.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elemento de bloque</td><td>-</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Mejora la navegación para lectores de pantalla. Use junto con encabezados apropiados.
+            </div>
+            <p class="spec-ref">Referencia: <a href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element" target="_blank">HTML Living Standard</a></p>
+
+            <h3>&lt;aside&gt;</h3>
+            <p>Representa contenido tangencialmente relacionado con el contenido principal.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elemento de bloque</td><td>-</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Identifica contenido complementario. Los lectores de pantalla pueden ofrecer opciones para saltarlo.
+            </div>
+            <p class="spec-ref">Referencia: <a href="https://html.spec.whatwg.org/multipage/sections.html#the-aside-element" target="_blank">HTML Living Standard</a></p>
+
+            <h3>&lt;figure&gt; y &lt;figcaption&gt;</h3>
+            <p>&lt;figure&gt; representa contenido autocontenido, como ilustraciones. &lt;figcaption&gt; proporciona una leyenda.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elementos de bloque</td><td>-</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Asocia la imagen con su descripción. Use alt en img para texto alternativo.
+            </div>
+            <p class="spec-ref">Referencia: <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element" target="_blank">HTML Living Standard</a></p>
+        </section>
+
+        <section id="text">
+            <h2>Elementos de Texto</h2>
+            <p>Elementos para estructurar y enfatizar texto.</p>
+
+            <h3>&lt;h1&gt; - &lt;h6&gt;</h3>
+            <p>Encabezados jerárquicos para estructurar el contenido.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elementos de bloque</td><td>-</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Esencial para navegación. Use jerarquía correcta (h1, luego h2, etc.). Evite saltos.
+            </div>
+            <p class="spec-ref">Referencia: <a href="https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements" target="_blank">HTML Living Standard</a></p>
+
+            <h3>&lt;p&gt;</h3>
+            <p>Representa un párrafo de texto.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elemento de bloque</td><td>-</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Proporciona pausas naturales en el contenido para lectores de pantalla.
+            </div>
+
+            <h3>&lt;blockquote&gt;</h3>
+            <p>Representa una cita de otro fuente.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>cite</td><td>URL de la fuente</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Indica citas. Use cite para fuente si es relevante.
+            </div>
+
+            <h3>&lt;cite&gt;</h3>
+            <p>Representa el título de una obra citada.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elemento en línea</td><td>-</td></tr>
+            </table>
+
+            <h3>&lt;mark&gt;</h3>
+            <p>Representa texto marcado o resaltado.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elemento en línea</td><td>-</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Use para resaltar información importante. Evite abuso que confunda.
+            </div>
+
+            <h3>&lt;time&gt;</h3>
+            <p>Representa una fecha y/o hora específicas.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>datetime</td><td>Fecha/hora en formato válido</td><td>No</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Permite a los agentes de usuario representar fechas de manera significativa.
+            </div>
+
+            <h3>&lt;abbr&gt;</h3>
+            <p>Representa una abreviatura o acrónimo.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>title</td><td>Expansión completa</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Proporciona expansión para lectores de pantalla. Siempre use title.
+            </div>
+        </section>
+
+        <section id="lists">
+            <h2>Listas</h2>
+            <p>Estructuras para organizar contenido en listas.</p>
+
+            <h3>&lt;ul&gt;</h3>
+            <p>Lista desordenada.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elemento de bloque</td><td>-</td></tr>
+            </table>
+
+            <h3>&lt;ol&gt;</h3>
+            <p>Lista ordenada.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>start</td><td>Número inicial</td><td>Sí</td></tr>
+                <tr><td>reversed</td><td>Orden inverso</td><td>Sí</td></tr>
+                <tr><td>type</td><td>Tipo de numeración</td><td>Sí</td></tr>
+            </table>
+
+            <h3>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</h3>
+            <p>Lista de definiciones: &lt;dl&gt; contenedor, &lt;dt&gt; término, &lt;dd&gt; definición.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elementos de bloque</td><td>-</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Asocian términos con definiciones. Lectores de pantalla anuncian relaciones.
+            </div>
+        </section>
+
+        <section id="media">
+            <h2>Multimedia</h2>
+            <p>Elementos para contenido audiovisual.</p>
+
+            <h3>&lt;video&gt;</h3>
+            <p>Reproduce video.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>src</td><td>URL del video</td><td>Sí (o &lt;source&gt;)</td></tr>
+                <tr><td>controls</td><td>Muestra controles</td><td>Sí</td></tr>
+                <tr><td>autoplay</td><td>Reproduce automáticamente</td><td>Sí</td></tr>
+                <tr><td>loop</td><td>Repite indefinidamente</td><td>Sí</td></tr>
+                <tr><td>muted</td><td>Silenciado por defecto</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Proporcione transcripciones o subtítulos. Evite autoplay. Use &lt;track&gt; para subtítulos.
+            </div>
+
+            <h3>&lt;audio&gt;</h3>
+            <p>Reproduce audio.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>src</td><td>URL del audio</td><td>Sí (o &lt;source&gt;)</td></tr>
+                <tr><td>controls</td><td>Muestra controles</td><td>Sí</td></tr>
+                <tr><td>autoplay</td><td>Reproduce automáticamente</td><td>Sí</td></tr>
+                <tr><td>loop</td><td>Repite indefinidamente</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Proporcione transcripciones. Evite autoplay sin consentimiento del usuario.
+            </div>
+
+            <h3>&lt;source&gt;</h3>
+            <p>Especifica recursos multimedia alternativos.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>src</td><td>URL del recurso</td><td>No</td></tr>
+                <tr><td>type</td><td>Tipo MIME</td><td>Sí</td></tr>
+            </table>
+        </section>
+
+        <section id="forms">
+            <h2>Formularios</h2>
+            <p>Elementos para recopilar entrada del usuario.</p>
+
+            <h3>&lt;form&gt;</h3>
+            <p>Contenedor de formulario.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>action</td><td>URL para envío</td><td>Sí</td></tr>
+                <tr><td>method</td><td>Método HTTP</td><td>Sí</td></tr>
+            </table>
+
+            <h3>&lt;input&gt;</h3>
+            <p>Campo de entrada. Tipos incluyen: text, email, url, tel, number, range, date, color, search.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>type</td><td>Tipo de input</td><td>Sí</td></tr>
+                <tr><td>name</td><td>Nombre del campo</td><td>No</td></tr>
+                <tr><td>value</td><td>Valor inicial</td><td>Sí</td></tr>
+                <tr><td>required</td><td>Campo obligatorio</td><td>Sí</td></tr>
+                <tr><td>placeholder</td><td>Texto de sugerencia</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Use label asociado. Proporcione instrucciones claras. Valide entrada.
+            </div>
+
+            <h3>&lt;textarea&gt;</h3>
+            <p>Área de texto multilínea.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>name</td><td>Nombre del campo</td><td>No</td></tr>
+                <tr><td>rows</td><td>Número de filas</td><td>Sí</td></tr>
+                <tr><td>cols</td><td>Número de columnas</td><td>Sí</td></tr>
+                <tr><td>placeholder</td><td>Texto de sugerencia</td><td>Sí</td></tr>
+            </table>
+
+            <h3>&lt;button&gt;</h3>
+            <p>Botón interactivo.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>type</td><td>Tipo: submit, reset, button</td><td>Sí</td></tr>
+            </table>
+        </section>
+
+        <section id="interactive">
+            <h2>Elementos Interactivos</h2>
+            <p>Elementos que permiten interacción del usuario.</p>
+
+            <h3>&lt;details&gt; y &lt;summary&gt;</h3>
+            <p>&lt;details&gt; crea widget expandible/colapsable. &lt;summary&gt; es el encabezado visible.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>open</td><td>Estado inicial expandido</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Navegable por teclado. Lectores de pantalla anuncian estado.
+            </div>
+
+            <h3>&lt;progress&gt;</h3>
+            <p>Representa progreso de una tarea.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>value</td><td>Valor actual</td><td>Sí</td></tr>
+                <tr><td>max</td><td>Valor máximo</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Anuncia progreso a lectores de pantalla. Use junto con aria-valuenow si necesario.
+            </div>
+
+            <h3>&lt;meter&gt;</h3>
+            <p>Representa medida escalar dentro de rango conocido.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>value</td><td>Valor medido</td><td>No</td></tr>
+                <tr><td>min</td><td>Valor mínimo</td><td>Sí</td></tr>
+                <tr><td>max</td><td>Valor máximo</td><td>Sí</td></tr>
+                <tr><td>low</td><td>Umbral bajo</td><td>Sí</td></tr>
+                <tr><td>high</td><td>Umbral alto</td><td>Sí</td></tr>
+                <tr><td>optimum</td><td>Valor óptimo</td><td>Sí</td></tr>
+            </table>
+        </section>
+
+        <section id="graphics">
+            <h2>Gráficos</h2>
+            <p>Elementos para gráficos vectoriales y rasterizados.</p>
+
+            <h3>&lt;canvas&gt;</h3>
+            <p>Área de dibujo para gráficos rasterizados usando JavaScript.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>width</td><td>Ancho en píxeles</td><td>Sí</td></tr>
+                <tr><td>height</td><td>Alto en píxeles</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Proporcione texto alternativo. Use ARIA si es interactivo.
+            </div>
+
+            <h3>&lt;svg&gt;</h3>
+            <p>Contenedor para gráficos vectoriales escalables.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>width</td><td>Ancho</td><td>Sí</td></tr>
+                <tr><td>height</td><td>Alto</td><td>Sí</td></tr>
+                <tr><td>viewBox</td><td>Área visible</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Use title y desc para descripciones. Evite SVG puramente decorativo.
+            </div>
+        </section>
+
+        <section id="advanced">
+            <h2>Elementos Avanzados</h2>
+            <p>Elementos más especializados de HTML5.</p>
+
+            <h3>&lt;datalist&gt;</h3>
+            <p>Proporciona lista de opciones predefinidas para input.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>id</td><td>Identificador único</td><td>No</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Mejora autocompletado. Lectores de pantalla anuncian opciones disponibles.
+            </div>
+
+            <h3>&lt;output&gt;</h3>
+            <p>Representa resultado de cálculo o acción del usuario.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>for</td><td>IDs de elementos relacionados</td><td>Sí</td></tr>
+                <tr><td>name</td><td>Nombre del campo</td><td>Sí</td></tr>
+            </table>
+
+            <h3>&lt;dialog&gt;</h3>
+            <p>Representa diálogo o ventana modal.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>open</td><td>Diálogo visible</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Gestiona foco correctamente. Use showModal() para modales.
+            </div>
+
+            <h3>&lt;picture&gt;</h3>
+            <p>Contenedor para múltiples fuentes de imagen.</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>Ninguno específico</td><td>Elemento de bloque</td><td>-</td></tr>
+            </table>
+
+            <h3>&lt;track&gt;</h3>
+            <p>Proporciona pistas de texto para media (subtítulos, etc.).</p>
+            <table class="component-table">
+                <tr><th>Atributo</th><th>Descripción</th><th>Opcional</th></tr>
+                <tr><td>src</td><td>URL del archivo de pista</td><td>No</td></tr>
+                <tr><td>kind</td><td>Tipo de pista</td><td>Sí</td></tr>
+                <tr><td>srclang</td><td>Idioma de la pista</td><td>Sí</td></tr>
+                <tr><td>label</td><td>Etiqueta visible</td><td>Sí</td></tr>
+            </table>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Esencial para contenido multimedia. Proporcione subtítulos para todos los videos.
+            </div>
+
+            <h3>Microdatos</h3>
+            <p>Atributos para añadir metadatos semánticos: itemscope, itemtype, itemprop.</p>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Mejora SEO y comprensión de contenido por máquinas. No afecta accesibilidad directa.
+            </div>
+
+            <h3>Atributos de Datos</h3>
+            <p>Atributos data-* para almacenamiento de datos personalizados.</p>
+            <div class="accessibility-note">
+                <strong>Accesibilidad:</strong> Use para mejorar funcionalidad. No reemplace atributos semánticos estándar.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Guía de Componentes HTML5 - Conforme a estándares W3C y WCAG</p>
+    </footer>
+</body>
+</html></content>
+<parameter name="filePath">c:\Diplomado\explanations.html
